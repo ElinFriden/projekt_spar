@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("./DM_Sans/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf")
+    format("truetype");
+  font-weight: 100 1000;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* h2 */
+  --fontSize-h2: calc(26rem / 16);
+  --fontWeight-h2: 600;
+}
+
+/* resets */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "DM sans", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* slut på resets */
+
+header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  font-size: calc(14rem / 16);
+  text-align: center;
+}
+
+header p {
+  padding: 16px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 16px;
+}
+
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.paragraph {
+  padding: 16px;
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.h2 {
+  font-size: var(--fontSize-h2);
+  font-weight: var(--fontWeight-h2);
+}
