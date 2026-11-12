@@ -7,82 +7,126 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- header uppdelat i erbjudande och nav-->
+    <!-- header with an offer and a nav-->
     <header>
       <div>
         <p>Medlemserbjudande: Cykelmagasin + byxband</p>
       </div>
       <nav class="navigation">
-        <img src="horse.png" alt="running horse" />
-        <img src="menu.svg" alt="" />
+        <img src="images/horse_white.png" alt="running horse" />
+        <img src="images/menu.svg" alt="" />
       </nav>
     </header>
 
-    <!-- slutet av header, början med stor hero-bild -->
+    <!-- start of main-->
     <main>
-      <img src="grey.jpg" alt="" />
+      <img class="heroImage" src="images/grey.jpeg" alt="" />
       <div class="paragraph">
         <h2 class="h2">Utforska kollektionen</h2>
         <p>Favoriter för februarimörkret eller annan text på typ två rader.</p>
-
-        <section class="photoGrid">
-          <img class="item1" src="Helmet.png" alt="" />
-          <img src="grey.jpg" alt="" />
-          <img src="grey.jpg" alt="" />
-          <img src="grey.jpg" alt="" />
-          <img src="grey.jpg" alt="" />
-        </section>
       </div>
 
-      <div class="button light">
-        <button>Häst och pil</button>
+      <section class="photoGrid">
+        <img class="item1 heroImage" src="images/helmet.png" alt="" />
+        <img src="images/grey.jpeg" alt="" />
+        <img src="images/grey.jpeg" alt="" />
+        <img src="images/grey.jpeg" alt="" />
+        <img src="images/grey.jpeg" alt="" />
+      </section>
+
+      <div class="container">
+        <img class="banner" src="images/horse_dark.svg" alt="" />
       </div>
 
-      <span> häst och pil?</span>
       <div class="paragraph">
         <h2 class="h2">Bli en del av gänget</h2>
         <p>
           Bli medlem i Spår och få första numret av vårt exklusiva cykelmagasin
           hem till din brevlåda.
         </p>
-        <img src="grey.jpg" alt="" />
-        <img src="Star.png" alt="" />
       </div>
-      <div class="button dark horse">
-        <button>Häst, Gå med, pil</button>
+      <img class="heroImage" src="images/grey.jpeg" alt="" />
+      <!--
+      <img src="images/Star.png" alt="" />
+      -->
+
+      <div class="buttonContainer">
+        <button class="button">
+          Gå med
+          <img src="images/Arrow White.svg" alt="" />
+        </button>
       </div>
 
-      <!-- design-delen med produktbild och färgkonfigurator-->
+      <!-- design-part with product card and colors -->
       <section class="designSection">
         <h2 class="h2">Designa din egen</h2>
-        <img src="grey.jpg" alt="" />
+        <img class="heroImage" src="images/grey.jpeg" alt="" />
         <h3>Safe hjälm</h3>
+        <div class="configurator">
+          <span class="colorPicker option1"></span>
+          <span class="colorPicker option2"></span>
+          <span class="colorPicker option3"></span>
+          <span class="colorPicker option4"></span>
+        </div>
+        <p class="pointer">
+          Designa mer <img src="images/small_black_arrow.svg" alt="" />
+        </p>
       </section>
       <div class="paragraph">
-        <h2>Läs mer om vår hållbarhet</h2>
+        <h2 class="h2">Läs mer om vår hållbarhet</h2>
         <p>
           Vi jobbar med......hållbara material och vi skriver kort om det på två
           rader ungefär. Det kanske till och med blir tre.
         </p>
-        <img src="grey.jpg" alt="" />
       </div>
-      <div class="button dark">
-        <button>Läs mer, pil</button>
+      <div class="buttonOverImage">
+        <img class="heroImage" src="images/grey.jpeg" alt="" />
+
+        <div class="buttonContainer">
+          <button class="button overlap">
+            Läs mer
+            <img src="images/Arrow White.svg" alt="" />
+          </button>
+        </div>
       </div>
     </main>
 
-    <!-- footer
-     behålla listan eller kanske divs i flexbox?-->
+    <!-- footer -->
     <footer>
       <ul>
-        <h3>Spår</h3>
-        <li>Om oss</li>
-        <li>Kontakta oss</li>
+        <li class="lined">
+          <h3>Spår</h3>
+          <img src="images/horse_white.png" alt="" />
+        </li>
+        <li class="listItem lined">
+          <p>Om oss</p>
+          <img src="images/small_white_arrow.svg" alt="" />
+        </li>
+        <li class="listItem lined">
+          Kontakta oss <img src="images/small_white_arrow.svg" alt="" />
+        </li>
         <li>
-          <img width="50px" src="insta-logo.svg" alt="" />
+          <img class="instaLogo" src="images/insta_logo.svg" alt="" />
           @spår
         </li>
       </ul>
     </footer>
   </body>
 </html>
+
+<!--         <div
+          class="tenor-gif-embed banner"
+          data-postid="8966465"
+          data-share-method="host"
+          data-aspect-ratio="1.60714"
+          data-width="100%"
+        >
+          <a href="https://tenor.com/view/grey-horse-run-galop-gif-8966465"
+            >Grey Horse GIF</a
+          >from <a href="https://tenor.com/search/grey-gifs">Grey GIFs</a>
+        </div>
+        <script
+          type="text/javascript"
+          async
+          src="https://tenor.com/embed.js"
+        ></script>-->
