@@ -103,7 +103,42 @@ header p {
   background-color: black;
   color: white;
   padding: var(--space-medium);
+  position: relative;
 }
+
+/* dropdown menu */
+.dropdown {
+  position: relative;
+}
+
+.dropBtn {
+  cursor: pointer;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100vw;
+  z-index: 1000;
+  top: 30px;
+  right: -16px;
+  background-color: black;
+  padding-top: 50px;
+}
+
+.dropdownContent a {
+  color: white;
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+/* end of dropdown */
 
 .firstHero {
   position: relative;
