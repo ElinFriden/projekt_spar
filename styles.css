@@ -24,10 +24,11 @@
   --fontSize-p: calc(16rem / 16);
   --fontWeight-p: 400;
 
-  /* gaps and paddings */
-  --padding: 16px;
-  --rowGap: 8px;
-  --columnGap: 8px;
+  /* spaces */
+  --space-small: 8px;
+  --space-medium: 16px;
+  --space-large: 24px;
+  --space-xl: 64px;
 
   /* button */
   --fontWeight-button: 400;
@@ -43,6 +44,14 @@
   font-family: "DM sans", sans-serif;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -50,6 +59,7 @@ img {
 
 .heroImage {
   width: 100vw;
+  padding-bottom: var(--space-medium);
 }
 
 p {
@@ -71,6 +81,7 @@ li.lined {
 /* elements and classes */
 
 header {
+  width: 100vw;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -83,7 +94,7 @@ header {
 }
 
 header p {
-  padding: var(--padding);
+  padding: var(--space-medium);
 }
 
 .navigation {
@@ -91,20 +102,47 @@ header p {
   justify-content: space-between;
   background-color: black;
   color: white;
-  padding: var(--padding);
+  padding: var(--space-medium);
 }
 
-.photoGrid {
+.firstHero {
+  position: relative;
+}
+
+.logo {
+  width: 295px;
+  position: absolute;
+  bottom: 50%;
+  left: 40px;
+}
+
+/* carousel with product images */
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+}
+
+.carouselItem {
+  scroll-snap-align: center;
+}
+
+/*
+.carousel {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
-  row-gap: var(--rowGap);
-  column-gap: var(--columnGap);
+  row-gap: var(--space-small);
+  column-gap: var(--space-small);
 }
 
+*/
+
 .paragraph {
-  padding: 0px 16px 24px 16px;
+  padding: 0px var(--space-medium) var(--space-large) var(--space-medium);
 }
 
 .item1 {
@@ -115,9 +153,40 @@ header p {
 .h2 {
   font-size: var(--fontSize-h2);
   font-weight: var(--fontWeight-h2);
-  padding-bottom: 16px;
-  padding-top: 64px;
+  padding-bottom: var(--space-medium);
+  padding-top: var(--space-xl);
+  margin-top: var(--space-medium);
 }
+
+.h3 {
+  padding-left: var(--space-medium);
+}
+
+/* star with image over another image 
+
+.starContainer {
+  position: relative;
+}
+
+.star {
+  width: 190px;
+  position: absolute;
+  bottom: -50px;
+  right: -10px;
+}
+
+.insideStar {
+  position: absolute;
+  bottom: 50px;
+  right: 10px;
+  width: 100px;
+  height: 80px;
+}
+
+*/
+
+/* moving horse banner */
+
 .container {
   overflow: hidden;
 }
@@ -125,12 +194,15 @@ header p {
   position: relative;
   animation: banner 8s infinite;
   animation-timing-function: linear;
-  padding: 32px 0 32px 0;
+  padding: var(--space-medium) 0 var(--space-medium) 0;
+  margin-top: var(--space-xl);
 }
+
+/* buttons */
 
 .pointer {
   display: flex;
-  padding: 0 16px 0 16px;
+  padding: 0 var(--space-medium) 0 var(--space-medium);
 }
 
 .buttonContainer {
@@ -145,29 +217,31 @@ header p {
 .button {
   display: flex;
   justify-content: space-between;
-
   color: white;
   background-color: black;
   border-style: none;
   width: 180px;
-  padding: 16px;
+  padding: var(--space-medium);
   font-weight: var(--fontWeight-button);
+  margin-top: var(--space-xl);
 }
 
 .button.overlap {
   position: absolute;
   right: auto;
-  bottom: 24px;
+  bottom: var(--space-xl);
 }
+
+/* configurator/ colorpicker */
 
 .configurator {
   display: flex;
   justify-content: space-evenly;
-  padding: 16px;
+  padding: var(--space-medium);
 }
 
 .colorPicker {
-  height: 24px;
+  height: var(--space-large);
   width: 70px;
 }
 
@@ -203,6 +277,10 @@ li {
 
 li.listItem {
   justify-content: space-between;
+}
+
+.letterLogo {
+  width: 100px;
 }
 
 .instaLogo {
