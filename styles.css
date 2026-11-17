@@ -66,7 +66,6 @@ img {
 .heroImage {
   width: 100vw;
   height: 673px;
-  padding-bottom: var(--space-m);
 }
 
 p {
@@ -81,8 +80,15 @@ ul {
 li {
   list-style: none;
 }
+
 li.lined {
   border-bottom: 1px solid white;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-bg-color);
+  font-style: italic;
 }
 
 /* elements and classes */
@@ -99,7 +105,7 @@ header {
 }
 
 header p {
-  padding: var(--space-medium);
+  padding-bottom: var(--space-xs);
 }
 
 .navigation {
@@ -108,9 +114,16 @@ header p {
   align-items: center;
   background-color: black;
   color: white;
-  padding: var(--space-medium);
   position: relative;
   padding: var(--space-xs);
+}
+
+.langToggle {
+  margin-left: 180px;
+}
+
+.swedish {
+  color: #989898;
 }
 
 /* dropdown menu */
@@ -180,7 +193,7 @@ header p {
 .magazineImg {
   height: 160px;
   width: 100%;
-  padding-bottom: var(--space-s);
+  margin-bottom: var(--space-s);
 }
 
 /* overlapping button and member offer */
@@ -195,13 +208,15 @@ header p {
   display: flex;
   z-index: 1000;
   align-items: center;
-  gap: 16px;
+  width: 100vw;
+  gap: 25px;
 }
 
 .overlap .button {
   width: 180px;
   height: 46px;
   justify-content: center;
+  margin: 0;
 }
 
 .star {
@@ -221,6 +236,12 @@ header p {
   padding: 0px var(--space-xs) var(--space-xs) var(--space-xs);
 }
 
+.paragraph.colored {
+  background-color: var(--accent-color);
+  margin-top: 80px;
+  padding-bottom: var(--space-s);
+}
+
 .item1 {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -230,13 +251,14 @@ header p {
 .h3 {
   font-size: var(--fontsize-h2);
   font-weight: var(--fontWeight-h2);
-  padding-top: var(--space-xs);
+  padding-top: var(--space-m);
   padding-bottom: var(--space-xs);
   line-height: 110%;
 }
 
 .h3 {
-  padding-bottom: var(--space-m);
+  padding-bottom: 0px;
+  padding-top: var(--space-xs);
 }
 
 /* moving horse banner */
@@ -306,10 +328,8 @@ header p {
   font-size: var(--fontsize-link);
   padding: var(--space-xs) 24px var(--space-xs) 24px;
   font-weight: var(--fontWeight-button);
-  margin-top: var(--space-xl);
   text-wrap: nowrap;
-  margin-top: var(--space-xs);
-  margin-bottom: var(--space-xs);
+  margin-top: var(--space-m);
 }
 
 .arrow {
@@ -372,6 +392,7 @@ li.listItem {
 
 .instaLogo {
   width: 30px;
+  margin-right: 10px;
 }
 
 /* media queries*/
