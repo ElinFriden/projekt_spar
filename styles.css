@@ -8,9 +8,57 @@
 
 @font-face {
   font-family: "DM Sans";
-  src: url("./DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf")
+  src: url("/DM_Sans/DMSans-Italic-VariableFont_opsz,wght.ttf")
     format("truetype");
   font-weight: 100 1000;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  src: url("/DM_Mono/DMMono-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  src: url("/DM_Mono/DMMono-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  src: url("/DM_Mono/DMMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  src: url("/DM_Mono/DMMono-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  src: url("/DM_Mono/DMMono-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  src: url("/DM_Mono/DMMono-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
   font-style: italic;
   font-display: swap;
 }
@@ -86,6 +134,7 @@ li.lined {
 }
 
 a {
+  font-family: "DM Mono";
   text-decoration: none;
   color: var(--main-bg-color);
   font-style: italic;
@@ -105,6 +154,7 @@ header {
 }
 
 header p {
+  font-family: "DM Mono";
   padding-bottom: var(--space-xs);
 }
 
@@ -320,6 +370,7 @@ header p {
 }
 
 .button {
+  font-family: "DM Mono";
   display: inline-flex;
   align-items: center;
   color: black;
@@ -380,6 +431,7 @@ li {
   display: flex;
   align-items: center;
   padding: 20px 0 20px 0;
+  font-style: italic;
 }
 
 li.listItem {
