@@ -16,22 +16,28 @@
 }
 
 :root {
-  /* h2 */
-  --fontSize-h2: calc(26rem / 16);
-  --fontWeight-h2: 600;
+  /*colors*/
+  --main-bg-color: #ffffff;
+  --main-text-color: #000000;
+  --accent-color: #f4ffc5;
 
-  /* p */
-  --fontSize-p: calc(16rem / 16);
+  /*font size */
+  --fontsize-h2: calc(26rem / 16);
+  --fontsize-p: calc(16rem / 16);
+  --fontsize-link: calc(14rem / 16);
+
+  /*font weight */
+  --fontWeight-h2: 500;
   --fontWeight-p: 400;
-
-  /* spaces */
-  --space-small: 8px;
-  --space-medium: 16px;
-  --space-large: 24px;
-  --space-xl: 64px;
-
-  /* button */
   --fontWeight-button: 400;
+
+  /*spaces*/
+  --space-xxs: 8px;
+  --space-xs: 16px;
+  --space-s: 32px;
+  --space-m: 40px;
+  --space-l: 64px;
+  --space-xl: 100px;
 }
 
 /* resets */
@@ -59,7 +65,8 @@ img {
 
 .heroImage {
   width: 100vw;
-  padding-bottom: var(--space-medium);
+  height: 673px;
+  padding-bottom: var(--space-m);
 }
 
 p {
@@ -82,15 +89,13 @@ li.lined {
 
 header {
   width: 100vw;
-  position: sticky;
-  top: 0;
-  z-index: 1;
   background-color: white;
   display: flex;
   flex-direction: column;
   padding-top: 30px;
-  font-size: calc(14rem / 16);
+  font-size: var(--fontsize-link);
   text-align: center;
+  margin-top: var(--space-l);
 }
 
 header p {
@@ -100,10 +105,12 @@ header p {
 .navigation {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: black;
   color: white;
   padding: var(--space-medium);
   position: relative;
+  padding: var(--space-xs);
 }
 
 /* dropdown menu */
@@ -121,7 +128,7 @@ header p {
   background-color: #f9f9f9;
   width: 100vw;
   z-index: 1000;
-  top: 30px;
+  top: 15px;
   right: -16px;
   background-color: black;
   padding-top: 50px;
@@ -155,29 +162,23 @@ header p {
 
 .carousel {
   display: flex;
+  gap: 20px;
   overflow-x: auto;
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
+  padding-top: var(--space-xs);
+  padding-bottom: var(--space-xs);
 }
 
 .carouselItem {
   scroll-snap-align: center;
+  width: 200px;
 }
 
-/*
-.carousel {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  align-items: center;
-  row-gap: var(--space-small);
-  column-gap: var(--space-small);
-}
-
-*/
+/* end of carousel */
 
 .paragraph {
-  padding: 0px var(--space-medium) var(--space-large) var(--space-medium);
+  padding: 0px var(--space-xs) var(--space-xs) var(--space-xs);
 }
 
 .item1 {
@@ -185,16 +186,22 @@ header p {
   grid-column-end: 3;
 }
 
-.h2 {
-  font-size: var(--fontSize-h2);
+.h2,
+.h3 {
+  font-size: var(--fontsize-h2);
   font-weight: var(--fontWeight-h2);
-  padding-bottom: var(--space-medium);
-  padding-top: var(--space-xl);
-  margin-top: var(--space-medium);
+  padding-top: var(--space-xs);
+  padding-bottom: var(--space-xs);
+  line-height: 110%;
 }
 
 .h3 {
-  padding-left: var(--space-medium);
+  padding-bottom: var(--space-m);
+}
+
+.magazineImg {
+  height: 160px;
+  width: 100%;
 }
 
 /* star with image over another image 
@@ -229,42 +236,33 @@ header p {
   position: relative;
   animation: banner 8s infinite;
   animation-timing-function: linear;
-  padding: var(--space-medium) 0 var(--space-medium) 0;
-  margin-top: var(--space-xl);
+  padding: var(--space-m) var(--space-xs) var(--space-m) var(--space-xs);
 }
 
 /* buttons */
-
-.pointer {
-  display: flex;
-  padding: 0 var(--space-medium) 0 var(--space-medium);
-}
 
 .buttonContainer {
   display: flex;
   justify-content: center;
 }
 
-.buttonOverImage {
-  position: relative;
-}
-
 .button {
   display: flex;
   justify-content: space-between;
-  color: white;
-  background-color: black;
-  border-style: none;
-  width: 180px;
-  padding: var(--space-medium);
+  color: black;
+  background-color: white;
+  border-style: solid;
+  font-size: var(--fontsize-link);
+  padding: var(--space-xs) 24px var(--space-xs) 24px;
   font-weight: var(--fontWeight-button);
   margin-top: var(--space-xl);
+  text-wrap: nowrap;
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-xs);
 }
 
-.button.overlap {
-  position: absolute;
-  right: auto;
-  bottom: var(--space-xl);
+.arrow {
+  padding-left: var(--space-xxs);
 }
 
 /* configurator/ colorpicker */
@@ -301,7 +299,8 @@ header p {
 footer {
   background-color: #151515;
   color: white;
-  padding: 20px;
+  padding: var(--space-xs);
+  margin-top: var(--space-l);
 }
 
 li {
@@ -342,5 +341,9 @@ li.listItem {
   .banner {
     animation: banner 12s infinite;
     animation-timing-function: linear;
+  }
+
+  .carouselItem {
+    width: 500px;
   }
 }
