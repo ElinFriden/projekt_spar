@@ -262,12 +262,6 @@ header p {
   transition: max-height 0.5s;
 }
 
-.productTitle,
-.productSizes,
-.productText {
-  padding-left: var(--space-xs);
-}
-
 .productTitle {
   font-size: var(--fontsize-h2);
   font-family: "DM Mono";
@@ -291,7 +285,39 @@ header p {
 }
 
 .productCard img {
-  width: 100%;
+  max-width: 100%;
+  height: 191px;
+  margin: auto;
+}
+
+.productInfo {
+  padding-left: var(--space-xs);
+  padding-right: var(--space-m);
+}
+
+/* buttons for the product card */
+
+.productButtons {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0 var(--space-xs) var(--space-xs) 0;
+  justify-content: flex-start;
+  gap: var(--space-xs);
+}
+
+.btn {
+  width: 50px;
+  height: 17px;
+  border-radius: 0;
+  border: solid 1px black;
+}
+
+.btn:hover {
+  transform: skewX(-15deg);
+}
+
+.btn:focus {
+  transform: skewX(-15deg);
 }
 
 /* overlapping button and member offer */
@@ -622,6 +648,34 @@ li.lined {
 
   .carouselItem {
     width: 426px;
+  }
+
+  .productCard img {
+    max-width: 100%;
+    height: 443px;
+    margin: auto;
+  }
+
+  .productCard.open {
+    display: flex;
+    max-height: 900px;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: var(--space-l);
+    padding-right: var(--space-l);
+  }
+
+  .productInfo {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .productTitle {
+    font-size: var(--fontsize-h2-desktop);
+    font-family: "DM Mono";
+    font-weight: 500;
   }
 
   .banner {
