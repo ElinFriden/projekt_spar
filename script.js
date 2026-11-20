@@ -1,24 +1,24 @@
 const products = [
   {
-    image: "images/glasses.png",
-    title: "Glasögon",
+    image: "images/Bilder för webben/Cykeldator/Cykeldator_45grader.png",
+    title: "Cykeldator",
     sizes: "36, 37, 38, 39, 40",
     colors: ["#bdbdbd", "#eaff80", "#f0602d", "#86a0a4", "#b5b8a8"],
     text: "Lorem ipsum dolor sit amet consectetur.",
   },
   {
-    image: "images/jacket.png",
+    image: "images/Bilder för webben/Jacka_Black/Jacka_black_45.png",
     title: "Jacka",
     sizes: "S, M, L, XL",
     colors: ["#5b6652", "#1d1d1b"],
-    text: "Lätt skaljacka med dragkedja.",
+    text: "Lorem ipsum dolor sit amet consectetur..",
   },
   {
-    image: "images/hat.png",
-    title: "Keps",
+    image: "images/Bilder för webben/Jacka_Green/Jacka_green_front.png",
+    title: "Jacka",
     sizes: "One size",
     colors: ["#f0602d", "#86a0a4"],
-    text: "Enkel keps för alla dagar.",
+    text: "Lorem ipsum dolor sit amet consectetur.",
   },
 ];
 

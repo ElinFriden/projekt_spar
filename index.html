@@ -12,6 +12,10 @@
       rel="stylesheet"
     />
     <script src="script.js" defer></script>
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"
+    ></script>
   </head>
   <body>
     <!-- header with an offer and a nav-->
@@ -20,7 +24,7 @@
         <p>Medlemserbjudande: Cykelmagasin + byxband</p>
       </div>
       <nav class="navigation">
-        <img src="images/horse_white.png" alt="running horse" />
+        <img src="images/Logo.svg" alt="running horse" />
         <div class="langToggle">
           <a class="swedish" href="#">Sv</a>
           <span>/</span>
@@ -42,27 +46,28 @@
     <main>
       <div class="firstHero">
         <img class="heroImage" src="images/grey.jpeg" alt="" />
-        <img
-          class="logo"
-          src="Spår logga PNG och SVG/Spår PNG logga/Group 1.png"
-          alt=""
-        />
+        <div class="logo">
+          <img src="images/logo-white.svg" alt="" />
+          <img src="images/text-white.svg" alt="" />
+        </div>
       </div>
+      <div class="firstSection">
       <div class="paragraph">
         <h2 class="h2">Utforska kollektionen</h2>
-        <p>Favoriter för februarimörkret eller annan text på typ två rader.</p>
+        <p>Bra grejer för bra cykelturer. Kolla in vår nya kollektion.</p>
+        <p class="hiddenP">Designad för dig, drivet av teknik, skapat för planeten.</p>
       </div>
+    </div>
 
       <!-- carousel with product images-->
       <section class="carousel">
-        <img class="carouselItem" src="images/glasses.png" alt="" />
-        <img class="carouselItem" src="images/jacket.png" alt="" />
-        <img class="carouselItem" src="images/helmet.png" alt="" />
-        <img
-          class="carouselItem"
-          src="https://cdn.discordapp.com/attachments/1566750713638559756/1570738251436924978/Cykeldator_CAD_iteration2.png?ex=6af82f7e&is=6af6ddfe&hm=a112a358bb6fd55190141bd636f223be87840227bdac5af73198864eb5ee4052"
-          alt=""
-        />
+        <img class="carouselItem" src="images/Bilder för webben/Cykeldator/Cykeldator_45grader.png" alt="" />
+        <img class="carouselItem" src="images/Bilder för webben/Jacka_Black/Jacka_black_45.png" alt="" />
+        <img class="carouselItem" src="images/Bilder för webben/Jacka_Green/Jacka_green_front.png" alt="" />
+        <img class="carouselItem" src="images/Bilder för webben/Keps_Blue/Keps_Blue_side.png" alt="" />
+        <img class="carouselItem" src="images/Bilder för webben/Keps_Orange/Keps_orange_45.png" alt="" />
+        <img class="carouselItem" src="images/Bilder för webben/Cykeldator/Cykeldator_snettovna.png" alt="" />
+        <img class="carouselItem" src="images/Bilder för webben/Keps_Blue/Keps_Blue_snettovan.png" alt="" />
       </section>
 
       <!-- product card that shows when clicked-->
@@ -78,24 +83,32 @@
       <!-- moving banner 1-->
 
       <div class="bannerContainer">
-        <img class="banner" src="images/horse_dark.svg" alt="" />
+        <img class="banner" src="images/Logo.svg" alt="" />
       </div>
-
-      <div class="paragraph">
-        <h2 class="h2">Bli en del av gänget</h2>
-        <p>Favoriter för februarimörkret eller annan text på typ två rader.</p>
-      </div>
-      <img class="magazineImg" src="images/grey.jpeg" alt="" />
+      <div class="flexParagraph">
+        <section class="paragraph">
+          <div>
+           <h2 class="h2">Bli en del av gänget</h2>
+            <p>
+            Som medlem får du tillgång till vårt Spår-magasin med
+            produktnyheter, inspiration och innehåll från communityt. Här möts
+            professionell fotografering och medlemmarnas egna perspektiv.
+            </p>
+          </div>
+        </section>
+        <img class="magazineImg" src="images/grey.jpeg" alt="" />
+       </div>
 
       <!-- overlapping button and member offer-->
       <div class="relative">
         <section class="overlap">
-          <div>
-            <img class="star" src="images/star.svg" alt="" />
+          <div class="badge">
+            <img class="layer star" src="images/star.svg" alt="" />
+            <img class="layer product" src="images/bands.png" alt="" />
           </div>
           <div class="buttonContainer">
             <button class="button">
-              Läs mer
+              Gå med
               <img class="arrow" src="images/arrow_black.svg" alt="" />
             </button>
           </div>
@@ -106,82 +119,97 @@
 
       <div class="bannerContainer">
         <div class="bannerImages">
-          <img class="bannerImg" src="images/glasses.png" alt="" />
-          <img class="bannerImg" src="images/Media.png" alt="" />
-          <img class="bannerImg" src="images/dog.png" alt="" />
-          <img class="bannerImg" src="images/jacket.png" alt="" />
-          <img class="bannerImg" src="images/hat.png" alt="" />
+          <img class="bannerImg" src="images/Spår kundbilder/4f8c8706-867e-4260-b4f5-a8e7430e4cb3.png" alt="" />
+          <img class="bannerImg" src="images/Spår kundbilder/8fc71ba7-75e0-4013-bebb-01f955732415.png" alt="" />
+          <img class="bannerImg" src="images/Spår kundbilder/9c4cc88a-ab77-4239-91f1-9f2fa517bced.png" alt="" />
+          <img class="bannerImg" src="images/Spår kundbilder/9ee4dbfa-5119-410b-9dd2-143b71b6e1d5.png" alt="" />
+          <img class="bannerImg" src="images/Spår kundbilder/bdabeadc-8f11-4578-b3bb-a1c12a288baf.png" alt="" />
+          <img class="bannerImg" src="images/Spår kundbilder/dog.png" alt="" />
 
           <!-- copies for the loop-->
-          <img class="bannerImg" src="images/glasses.png" alt="" />
-          <img class="bannerImg" src="images/Media.png" alt="" />
-          <img class="bannerImg" src="images/dog.png" alt="" />
-          <img class="bannerImg" src="images/jacket.png" alt="" />
-          <img class="bannerImg" src="images/hat.png" alt="" />
+
+          <img class="bannerImg" src="images/Spår kundbilder/4f8c8706-867e-4260-b4f5-a8e7430e4cb3.png" alt="" />
+          <img class="bannerImg" src="images/Spår kundbilder/8fc71ba7-75e0-4013-bebb-01f955732415.png" alt="" />
+          <img class="bannerImg" src="images/Spår kundbilder/9c4cc88a-ab77-4239-91f1-9f2fa517bced.png" alt="" />
+          <img class="bannerImg" src="images/Spår kundbilder/9ee4dbfa-5119-410b-9dd2-143b71b6e1d5.png" alt="" />
+          <img class="bannerImg" src="images/Spår kundbilder/bdabeadc-8f11-4578-b3bb-a1c12a288baf.png" alt="" />
+          <img class="bannerImg" src="images/Spår kundbilder/dog.png" alt="" />
+
         </div>
       </div>
 
-      <!-- design-part with product card and colors -->
+      <!-- Live demo -->
       <section class="designSection">
-        <div class="paragraph">
+        <div class="paragraph design">
           <h2 class="h2">Live demo</h2>
+          <img src="images/landscape.svg" alt="" />
         </div>
-        <img class="heroImage" src="images/grey.jpeg" alt="" />
+        <section class="grogu">
+          <model-viewer
+            alt="Grogu"
+            src="images/Grogu.glb"
+            shadow-intensity="1"
+            camera-controls
+            touch-action="pan-y"
+          ></model-viewer>
+        </section>
+        <section class="designFlex">
         <div class="paragraph">
           <h3 class="h3">Safe hjälm</h3>
         </div>
-        <div class="configurator">
-          <span class="colorPicker option1"></span>
-          <span class="colorPicker option2"></span>
-          <span class="colorPicker option3"></span>
-          <span class="colorPicker option4"></span>
-        </div>
-        <div class="buttonContainer">
-          <button class="button">
-            Till designverktyget
-            <img class="arrow" src="images/arrow_black.svg" alt="" />
-          </button>
-        </div>
-      </section>
-      <div class="paragraph colored">
-        <h2 class="h2">Läs mer om vår hållbarhet</h2>
-        <p>
-          Vi jobbar med......hållbara material och vi skriver kort om det på två
-          rader ungefär. Det kanske till och med blir tre.
-        </p>
-      </div>
-      <div class="buttonOverImage">
-        <img class="heroImage" src="images/grey.jpeg" alt="" />
 
         <div class="buttonContainer">
+          <button class="button">
+            Öppna designverktyget
+            <img class="arrow" src="images/arrow_black.svg" alt="" />
+          </button>
+        </section>
+        </div>
+      </section>
+
+      <!-- last section -->
+
+      <section class="lastSection">
+        <h2 class="h2 title">Läs mer om vår hållbarhet</h2>
+        <p class="intro">
+          För oss handlar hållbarhet om mer än bara material. Det handlar om hur
+          vi designar, producerar och levererar våra produkter.
+          <br></br>
+        </p>
+        <p class="body">
+          Vissa av våra produkter tillverkas med Biogarmentry, ett innovativt
+          textilmaterial utvecklat med levande mikroalger. Algerna kan genomföra
+          fotosyntes när de utsätts för ljus. På så sätt absorberar de koldioxid
+          och avger syre, precis som växter i naturen.
+        </p>
+
+        <img class="image-1" src="images/Hållbarhetscontainer/mobile.png" alt="" />
+        <img class="image-2" src="images/Hållbarhetscontainer/mobile.png" alt="">
+
+        <div class="buttonContainer cta">
           <button class="button">
             Läs mer
             <img class="arrow" src="images/arrow_black.svg" alt="" />
           </button>
         </div>
-      </div>
+      </section>
     </main>
 
     <!-- footer -->
     <footer>
       <ul>
         <li class="lined">
-          <img
-            class="letterLogo"
-            src="Spår logga PNG och SVG/Spår vector logga/Lettermak.svg"
-            alt=""
-          />
-          <img src="images/horse_white.png" alt="" />
+          <img src="images/Logo and lettermark.svg" alt="" />
         </li>
         <li class="listItem lined">
           <p>Om oss</p>
-          <img src="images/small_white_arrow.svg" alt="" />
+          <img src="images/small_black_arrow.svg" alt="" />
         </li>
         <li class="listItem lined">
-          Kontakta oss <img src="images/small_white_arrow.svg" alt="" />
+          Kontakta oss <img src="images/small_black_arrow.svg" alt="" />
         </li>
         <li>
-          <img class="instaLogo" src="images/insta_logo.svg" alt="" />
+          <img class="instaLogo" src="images/insta-logo.svg" alt="" />
           @spår
         </li>
       </ul>
