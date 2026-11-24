@@ -161,6 +161,10 @@ header p {
   padding-bottom: var(--space-xs);
 }
 
+.desktopNav {
+  display: none;
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -219,16 +223,33 @@ header p {
 
 .firstHero {
   position: relative;
+  width: 100%;
+}
+.video {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.video.mobile {
+  height: 550px;
+}
+
+.video.desktop {
+  display: none;
 }
 
 .logo {
-  display: flex;
-  gap: 20px;
-  width: 295px;
+  width: 100vw;
+  height: 550px;
   position: absolute;
-  bottom: 50%;
-  align-self: center;
-  justify-self: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo.desktop {
+  display: none;
 }
 
 .hiddenP {
@@ -249,9 +270,39 @@ header p {
 
 .carouselItem {
   scroll-snap-align: center;
-  width: 200px;
+  width: 175px;
   cursor: pointer;
   flex: none;
+  position: relative;
+}
+
+.carouselItem::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 60px;
+  height: 2px;
+  background: black;
+  transition: transform 0.25s ease;
+  opacity: 0;
+}
+
+.carouselItem:hover::after {
+  transform: translateX(-50%);
+  opacity: 1;
+  animation: floatingLine 1.6s ease-in-out infinite;
+}
+
+@keyframes floatingLine {
+  0%,
+  100% {
+    transform: translateX(-50%) scaleX(1) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) scaleX(1) translateY(8px);
+  }
 }
 
 /* product card that shows on click */
@@ -270,6 +321,11 @@ header p {
 }
 
 .productSizes {
+  font-size: var(--fontsize-link);
+  font-family: "DM Mono";
+}
+
+.productPrizes {
   font-size: var(--fontsize-link);
   font-family: "DM Mono";
   padding-bottom: var(--space-xs);
@@ -325,7 +381,7 @@ header p {
 .magazineImg {
   height: 160px;
   width: 100%;
-  padding-top: var(--space-xs);
+  margin-top: var(--space-xs);
   margin-bottom: var(--space-s);
 }
 
@@ -335,7 +391,7 @@ header p {
 
 .overlap {
   position: absolute;
-  bottom: -80px;
+  bottom: -68px;
   display: flex;
   z-index: 1000;
   align-items: center;
@@ -356,8 +412,6 @@ header p {
 .badge {
   display: grid;
   width: 164px;
-  flex-shrink: 0;
-  left: 5px;
 }
 
 .layer {
@@ -367,8 +421,13 @@ header p {
   display: block;
 }
 
+.layer.star {
+  height: 137px;
+}
+
 .layer.product {
-  width: 100px;
+  width: 90px;
+  height: 90px;
   justify-self: center;
   align-self: center;
   z-index: 1000;
@@ -404,6 +463,10 @@ header p {
   padding-top: var(--space-m);
 }
 
+.demoVector {
+  width: 43px;
+}
+
 .paragraph.design .h2 {
   padding: 0;
 }
@@ -422,14 +485,15 @@ header p {
   padding-top: var(--space-xs);
 }
 
-/* moving horse banner */
+/* moving horse and images banner */
 
 .bannerContainer {
   width: 100%;
   overflow: hidden;
 }
-.banner {
-  position: relative;
+.bannerHorse {
+  display: block;
+  width: 50px;
   animation: banner 8s infinite;
   animation-timing-function: linear;
   padding: var(--space-m) 0 var(--space-m) 0;
@@ -437,9 +501,9 @@ header p {
 
 .bannerImages {
   position: relative;
-  animation: bannerImages 18s infinite;
+  animation: bannerImages 12s infinite;
   animation-timing-function: linear;
-  padding: var(--space-s) var(--space-xs) var(--space-xl) var(--space-xs);
+  padding: var(--space-s) 0 var(--space-l) 0;
   display: flex;
   flex-wrap: nowrap;
   width: max-content;
@@ -449,7 +513,7 @@ header p {
   display: block;
   height: 268px;
   width: 268px;
-  margin-inline: 4px;
+  margin-inline: 6px;
   object-fit: cover;
   flex-shrink: 0;
 }
@@ -457,7 +521,7 @@ header p {
 /* animation */
 @keyframes banner {
   0% {
-    transform: translateX(0);
+    transform: translateX(-100px);
   }
   100% {
     transform: translateX(100vw);
@@ -493,6 +557,11 @@ header p {
   text-wrap: nowrap;
 }
 
+.button:hover {
+  background-color: var(--main-text-color);
+  color: var(--main-bg-color);
+}
+
 .arrow {
   padding-left: var(--space-xxs);
   flex: none;
@@ -501,7 +570,7 @@ header p {
 
 /* 3d model*/
 
-.grogu {
+.demo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -549,6 +618,7 @@ model-viewer {
   grid-area: intro;
 }
 .body {
+  display: none;
   grid-area: body;
 }
 .image-1 {
@@ -592,6 +662,8 @@ li.listItem {
 
 li.lined {
   border-bottom: 1px solid var(--main-text-color);
+  font-size: var(--fontsize-link);
+  font-style: italic;
 }
 
 .letterLogo {
@@ -606,6 +678,12 @@ li.lined {
 /* media queries*/
 
 @media (min-width: 600px) {
+  .demo {
+    height: 600px;
+    padding-right: var(--space-l);
+    padding-left: var(--space-l);
+    justify-self: center;
+  }
   .heroImage {
     width: 100vw;
   }
@@ -632,14 +710,71 @@ li.lined {
     font-weight: 400;
   }
 
+  .navigation {
+    padding-right: var(--space-m);
+    padding-left: var(--space-m);
+  }
+
+  .desktopNav {
+    display: flex;
+    gap: 56px;
+    margin-left: 530px;
+  }
+
+  .dropdown {
+    display: none;
+  }
+
+  .navigation a {
+    font-size: var(--fontsize-link-desktop);
+    color: var(--secondary-text-color);
+    font-style: normal;
+  }
+
+  .navigation a:hover {
+    color: var(--main-text-color);
+    font-style: italic;
+  }
+
+  .dropdownContent a:hover {
+    color: var(--main-text-color);
+    font-style: italic;
+  }
+
+  .langToggle {
+    margin: 0;
+  }
+
   .firstSection {
     padding-left: var(--space-l);
     padding-right: var(--space-l);
   }
 
-  .banner {
+  .video {
+    height: 810px;
+  }
+
+  .video.desktop {
+    display: block;
+  }
+
+  .video.mobile {
+    display: none;
+  }
+
+  .logo.mobile {
+    display: none;
+  }
+
+  .logo.desktop {
+    display: block;
+    height: 810px;
+  }
+
+  .bannerHorse {
     animation: banner 12s infinite;
     animation-timing-function: linear;
+    width: 65px;
   }
 
   .carousel {
@@ -678,6 +813,16 @@ li.lined {
     font-weight: 500;
   }
 
+  .productSizes,
+  .productPrizes {
+    font-size: var(--fontsize-link-desktop);
+    text-wrap: nowrap;
+  }
+
+  .productText {
+    font-size: var(--fontsize-p-desktop);
+  }
+
   .banner {
     padding: var(--space-l) 0 var(--space-l) 0;
   }
@@ -708,12 +853,22 @@ li.lined {
   .overlap {
     justify-content: space-between;
     padding-left: var(--space-l);
-    padding-right: 37%;
-    bottom: -60px;
+    padding-right: 45%;
+    bottom: -70px;
   }
 
   .overlap .buttonContainer {
     order: 0;
+  }
+
+  .layer.star {
+    width: 198px;
+    height: 198px;
+  }
+
+  .layer.product {
+    width: 110px;
+    height: 110px;
   }
 
   .overlap .badge {
@@ -732,6 +887,15 @@ li.lined {
     padding: var(--space-xl) var(--space-l) var(--space-xl) var(--space-l);
   }
 
+  .demoVector {
+    width: 58px;
+  }
+
+  model-viewer {
+    height: 680px;
+    width: 1440px;
+  }
+
   .paragraph.design {
     padding: 0;
   }
@@ -743,7 +907,7 @@ li.lined {
   }
 
   .lastSection {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 480px);
     grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
       "title   title   title"
@@ -756,10 +920,26 @@ li.lined {
   .intro {
     background: none;
     max-width: 800px;
+    padding-left: var(--space-l);
+    padding-bottom: var(--space-xs);
   }
 
   .body,
   .lastSection .buttonContainer {
     background: #ebff82;
+  }
+
+  .body {
+    display: block;
+    padding: var(--space-m) var(--space-l) var(--space-m) var(--space-s);
+  }
+
+  .cta {
+    justify-self: left;
+    padding: var(--space-m) 300px var(--space-l) var(--space-s);
+  }
+
+  .listItem.lined {
+    font-size: var(--fontsize-link-desktop);
   }
 }

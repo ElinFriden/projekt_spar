@@ -25,6 +25,12 @@
       </div>
       <nav class="navigation">
         <img src="images/Logo.svg" alt="running horse" />
+        <span class="desktopNav">
+          <a href="#">Kollektionen</a>
+          <a href="#">Gänget</a>
+          <a href="#">Live demo</a>
+          <a href="#">Hållbarhet</a>
+        </span>
         <div class="langToggle">
           <a class="swedish" href="#">Sv</a>
           <span>/</span>
@@ -35,7 +41,7 @@
           <div class="dropdownContent">
             <a href="#">Kollektionen</a>
             <a href="#">Gänget</a>
-            <a href="#">Customize</a>
+            <a href="#">Live demo</a>
             <a href="#">Hållbarhet</a>
           </div>
         </div>
@@ -45,15 +51,17 @@
     <!-- start of main-->
     <main>
       <div class="firstHero">
-        <img class="heroImage" src="images/grey.jpeg" alt="" />
-        <div class="logo">
-          <img src="images/logo-white.svg" alt="" />
-          <img src="images/text-white.svg" alt="" />
-        </div>
+        <video class="video mobile" height="550" autoplay muted loop>
+          <source src="images/Real header mobile.mp4" type="video/mp4" >
+        </video>
+        <video class="video desktop" height="550" autoplay muted loop>
+          <source src="images/Real header desktop.mp4" type="video/mp4" >
+        </video>
+
       </div>
       <div class="firstSection">
       <div class="paragraph">
-        <h2 class="h2">Utforska kollektionen</h2>
+        <h1 class="h2">Utforska kollektionen</h1>
         <p>Bra grejer för bra cykelturer. Kolla in vår nya kollektion.</p>
         <p class="hiddenP">Designad för dig, drivet av teknik, skapat för planeten.</p>
       </div>
@@ -61,20 +69,31 @@
 
       <!-- carousel with product images-->
       <section class="carousel">
-        <img class="carouselItem" src="images/Bilder för webben/Cykeldator/Cykeldator_45grader.png" alt="" />
-        <img class="carouselItem" src="images/Bilder för webben/Jacka_Black/Jacka_black_45.png" alt="" />
-        <img class="carouselItem" src="images/Bilder för webben/Jacka_Green/Jacka_green_front.png" alt="" />
-        <img class="carouselItem" src="images/Bilder för webben/Keps_Blue/Keps_Blue_side.png" alt="" />
-        <img class="carouselItem" src="images/Bilder för webben/Keps_Orange/Keps_orange_45.png" alt="" />
-        </section>
+        <div class="carouselItem">
+          <img src="images/Media/Desktop småbilder/Desktop-småbild-glajjor.png" alt="" />
+        </div>
+        <div class="carouselItem">
+          <img src="images/Media/Desktop småbilder/Desktop-småbild-jacka.png" alt="" />
+        </div>
+          <div class="carouselItem">
+          <img src="images/Media/Desktop småbilder/Desktop-småbild-hjälm.png" alt="" />
+        </div>
+          <div class="carouselItem">
+          <img src="images/Media/Desktop småbilder/Desktop-småbild-cykeldator.png" alt="" />
+        </div>
+          <div class="carouselItem">
+          <img src="images/Media/Desktop småbilder/Desktop-småbild-keps.png" alt="" />
+        </div>
+      </section>
 
       <!-- product card that shows when clicked-->
 
       <section class="productCard">
-        <img class="productImg" src="images/glasses.png" alt="" />
+        <img class="productImg" src="" alt="" />
         <div class="productInfo">
           <h3 class="productTitle"></h3>
           <p class="productSizes"></p>
+          <span class="productPrizes"></span>
           <span class="productButtons"> 
             <button class="btn first"></button>
             <button class="btn second"></button>
@@ -87,12 +106,15 @@
       <!-- moving banner 1-->
 
       <div class="bannerContainer">
-        <img class="banner" src="images/Logo.svg" alt="" />
+        <img class="bannerHorse" src="images/horse.gif" alt="" />
       </div>
+
+      <!-- join the journey!-->
+
       <div class="flexParagraph">
         <section class="paragraph">
           <div>
-           <h2 class="h2">Bli en del av gänget</h2>
+           <h2 class="h2">Join the journey!</h2>
             <p>
             Som medlem får du tillgång till vårt Spår-magasin med
             produktnyheter, inspiration och innehåll från communityt. Här möts
@@ -100,7 +122,7 @@
             </p>
           </div>
         </section>
-        <img class="magazineImg" src="images/grey.jpeg" alt="" />
+        <img class="magazineImg" src="images/Media/Magazine bild/Magazinebild Desktop.png" alt="" />
        </div>
 
       <!-- overlapping button and member offer-->
@@ -108,7 +130,7 @@
         <section class="overlap">
           <div class="badge">
             <img class="layer star" src="images/star.svg" alt="" />
-            <img class="layer product" src="images/bands.png" alt="" />
+            <img class="layer product" src="images/Media/Desktop bonus/Desktop bonus.png" alt="" />
           </div>
           <div class="buttonContainer">
             <button class="button">
@@ -146,22 +168,22 @@
       <section class="designSection">
         <div class="paragraph design">
           <h2 class="h2">Live demo</h2>
-          <img src="images/landscape.svg" alt="" />
+          <img class="demoVector" src="images/demo_vector.svg" alt="" />
         </div>
-        <section class="grogu">
+        <section class="demo">
           <model-viewer
-            alt="Grogu"
-            src="images/Grogu.glb"
+            alt="Silver helmet"
+            src="images/helmet_Silver.glb"
             shadow-intensity="1"
             camera-controls
             touch-action="pan-y"
+            disable-zoom
           ></model-viewer>
         </section>
         <section class="designFlex">
         <div class="paragraph">
           <h3 class="h3">Safe hjälm</h3>
         </div>
-
         <div class="buttonContainer">
           <button class="button">
             Öppna designverktyget
@@ -183,7 +205,9 @@
         <p class="body">
           Vissa av våra produkter tillverkas med Biogarmentry, ett innovativt
           textilmaterial utvecklat med levande mikroalger. Algerna kan genomföra
-          fotosyntes när de utsätts för ljus. På så sätt absorberar de koldioxid
+          fotosyntes när de utsätts för ljus. 
+          <br> </br>
+          På så sätt absorberar de koldioxid
           och avger syre, precis som växter i naturen.
         </p>
 
