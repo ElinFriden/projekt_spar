@@ -1,7 +1,7 @@
 const products = [
   {
     image: [
-      "images/Media/Desktop storbilder/Desktop storbild glajjor röd.png",
+      "images/Media/Desktop storbilder/Desktop storbild glajjor red.png",
       "images/Media/Desktop storbilder/Desktop storbild glajjor orange.png",
     ],
     colors: ["#FF5200", "#E8FF75"],
@@ -12,26 +12,26 @@ const products = [
   },
   {
     image: [
-      "images/Media/Desktop storbilder/Desktop storbild jacka grön.png",
-      "images/Media/Desktop storbilder/Desktop storbild jacka röd.png",
+      "images/Media/Desktop storbilder/jacka green.png",
+      "images/Media/Desktop storbilder/jacka red.png",
       "images/Media/Desktop storbilder/Desktop storbild jacka svart.png",
     ],
     colors: ["#B5B8A6", "#FF5200", "#1D1C1A"],
-    title: "Jacka",
+    title: "Kjell",
     sizes: "34, 36, 38, 40, 42",
-    prize: "1399",
+    prize: "1 399",
     text: "En bekväm och funktionell jacka som passar lika bra på cykeln som till vardags. Tillverkad i ett andningsbart material med fokus på komfort och rörelsefrihet.",
   },
   {
     image: [
-      "images/Media/Desktop storbilder/Desktop storbild hjälm silver.png",
-      "images/Media/Desktop storbilder/Desktop storbild hjälm gul.png",
-      "images/Media/Desktop storbilder/Desktop storbild hjälm orange.png",
+      "images/Media/Desktop storbilder/Desktop storbild helmet silver.png",
+      "images/Media/Desktop storbilder/Desktop storbild helmet yellow.png",
+      "images/Media/Desktop storbilder/Desktop storbild helmet orange.png",
     ],
     colors: ["#B5B8A6", "#E8FF75", "#FF5200"],
     title: "Hjälm",
     sizes: "S, M, L, XL",
-    prize: "1299",
+    prize: "1 299",
     text: "Hjälm med ventilationsöppningar som skapar luftgenomströmning och hjälper till att transportera bort värme under användning.",
   },
   {
@@ -39,14 +39,14 @@ const products = [
     colors: ["#1D1C1A"],
     title: "Kartan",
     sizes: "14 x 16 cm",
-    prize: "2599",
+    prize: "2 599",
     text: "En cykeldator som samlar viktig information direkt på styret. Håll koll på hastighet, navigering och rutt i realtid. ",
   },
   {
     image: [
-      "images/Media/Desktop storbilder/Desktop storbild keps röd.png",
-      "images/Media/Desktop storbilder/Desktop storbild keps blå.png",
-      "images/Media/Desktop storbilder/Desktop storbild keps grön.png",
+      "images/Media/Desktop storbilder/keps red.png",
+      "images/Media/Desktop storbilder/keps blue.png",
+      "images/Media/Desktop storbilder/keps green.png",
     ],
     colors: ["#FF5200", "#7EA1A3", "#B5B8A6"],
     title: "Keps",
@@ -98,3 +98,16 @@ buttons.forEach((button, buttonIndex) => {
     document.querySelector(".productImg").src = p.image[buttonIndex];
   });
 });
+
+const content = document.querySelector(".dropdownContent");
+const dropBtn = document.querySelector(".dropBtn");
+const closeBtn = document.querySelector(".closingBtn");
+
+function toggleMenu() {
+  const isOpen = content.classList.toggle("open");
+  dropBtn.hidden = isOpen;
+  closeBtn.hidden = !isOpen;
+}
+
+dropBtn.addEventListener("click", toggleMenu);
+closeBtn.addEventListener("click", toggleMenu);

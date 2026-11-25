@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +11,9 @@
       href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <script
       type="module"
@@ -38,6 +41,7 @@
         </div>
         <div class="dropdown">
           <img class="dropBtn" src="images/menu.svg" alt="" />
+          <img class="closingBtn" src="images/closing.svg" alt="" hidden>
           <div class="dropdownContent">
             <a href="#">Kollektionen</a>
             <a href="#">Gänget</a>
@@ -51,7 +55,7 @@
     <!-- start of main-->
     <main>
       <div class="firstHero">
-        <video class="video mobile" height="550" autoplay muted loop>
+        <video class="video mobile" height="550" autoplay playsinline muted loop>
           <source src="images/Real header mobile.mp4" type="video/mp4" >
         </video>
         <video class="video desktop" height="550" autoplay muted loop>
@@ -73,13 +77,13 @@
           <img src="images/Media/Desktop småbilder/Desktop-småbild-glajjor.png" alt="" />
         </div>
         <div class="carouselItem">
-          <img src="images/Media/Desktop småbilder/Desktop-småbild-jacka.png" alt="" />
+          <img src="images/kjell_small.webp" alt="" />
         </div>
           <div class="carouselItem">
-          <img src="images/Media/Desktop småbilder/Desktop-småbild-hjälm.png" alt="" />
+          <img src="images/helmet_small.webp" alt="" />
         </div>
           <div class="carouselItem">
-          <img src="images/Media/Desktop småbilder/Desktop-småbild-cykeldator.png" alt="" />
+          <img src="images/Cykeldator_small.webp" alt="" />
         </div>
           <div class="carouselItem">
           <img src="images/Media/Desktop småbilder/Desktop-småbild-keps.png" alt="" />
@@ -122,16 +126,18 @@
             </p>
           </div>
         </section>
+        <div class="magazineWrap">
         <img class="magazineImg" src="images/Media/Magazine bild/Magazinebild Desktop.png" alt="" />
-       </div>
+        <div class="badge">
+          <img class="layer star" src="images/star.svg" alt="" />
+          <img class="layer product" src="images/Media/Desktop bonus/Desktop bonus.png" alt="" />
+        </div>
+      </div>
+      </div>
 
       <!-- overlapping button and member offer-->
       <div class="relative">
         <section class="overlap">
-          <div class="badge">
-            <img class="layer star" src="images/star.svg" alt="" />
-            <img class="layer product" src="images/Media/Desktop bonus/Desktop bonus.png" alt="" />
-          </div>
           <div class="buttonContainer">
             <button class="button">
               Gå med
@@ -173,7 +179,7 @@
         <section class="demo">
           <model-viewer
             alt="Silver helmet"
-            src="images/helmet_Silver.glb"
+            src="images/helmet_Silver.compressed.glb"
             shadow-intensity="1"
             camera-controls
             touch-action="pan-y"
@@ -182,7 +188,7 @@
         </section>
         <section class="designFlex">
         <div class="paragraph">
-          <h3 class="h3">Safe hjälm</h3>
+          <h3 class="h3">Hjälm</h3>
         </div>
         <div class="buttonContainer">
           <button class="button">
@@ -211,8 +217,7 @@
           och avger syre, precis som växter i naturen.
         </p>
 
-        <img class="image-1" src="images/Hållbarhetscontainer/mobile.png" alt="" />
-        <img class="image-2" src="images/Hållbarhetscontainer/mobile.png" alt="">
+        <img class="image-1" src="images/Forpackning_glasogon_Alger.png" alt="" />
 
         <div class="buttonContainer cta">
           <button class="button">
@@ -230,11 +235,12 @@
           <img src="images/Logo and lettermark.svg" alt="" />
         </li>
         <li class="listItem lined">
-          <p>Om oss</p>
+          <a href="#">Om oss</a>
           <img src="images/small_black_arrow.svg" alt="" />
         </li>
         <li class="listItem lined">
-          Kontakta oss <img src="images/small_black_arrow.svg" alt="" />
+          <a href="#">Kontakta oss</a>
+          <img src="images/small_black_arrow.svg" alt="" />
         </li>
         <li>
           <img class="instaLogo" src="images/insta-logo.svg" alt="" />
@@ -244,20 +250,3 @@
     </footer>
   </body>
 </html>
-
-<!--         <div
-          class="tenor-gif-embed banner"
-          data-postid="8966465"
-          data-share-method="host"
-          data-aspect-ratio="1.60714"
-          data-width="100%"
-        >
-          <a href="https://tenor.com/view/grey-horse-run-galop-gif-8966465"
-            >Grey Horse GIF</a
-          >from <a href="https://tenor.com/search/grey-gifs">Grey GIFs</a>
-        </div>
-        <script
-          type="text/javascript"
-          async
-          src="https://tenor.com/embed.js"
-        ></script>-->
