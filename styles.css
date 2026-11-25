@@ -609,10 +609,10 @@ li.lined {
 
 @media (min-width: 600px) {
   .demo {
+    margin-top: var(--space-s);
     height: 600px;
-    padding-right: var(--space-l);
-    padding-left: var(--space-l);
     justify-self: center;
+    width: 91vw;
   }
   .heroImage {
     width: 100vw;
@@ -704,6 +704,7 @@ li.lined {
 
   .carousel {
     padding-bottom: var(--space-s);
+    padding-left: var(--space-l);
   }
 
   .carouselItem {
@@ -713,7 +714,7 @@ li.lined {
   .productCard img {
     max-width: 100%;
     height: 443px;
-    margin: auto;
+    margin: 0;
   }
 
   .productInner {
@@ -721,7 +722,7 @@ li.lined {
     align-items: center;
     justify-content: space-between;
     padding-left: var(--space-l);
-    padding-right: var(--space-l);
+    padding-right: 90px;
   }
 
   .productInfo {
@@ -805,7 +806,9 @@ li.lined {
   }
 
   .designSection {
-    padding: var(--space-xl) var(--space-l) var(--space-xl) var(--space-l);
+    padding: var(--space-xl) 0 var(--space-xl) 0;
+    margin-left: var(--space-l);
+    margin-right: var(--space-l);
   }
 
   .demoVector {
@@ -829,7 +832,8 @@ li.lined {
   }
 
   .lastSection {
-    grid-template-columns: repeat(3, 480px);
+    margin-top: 0;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
       "title   title   title"
